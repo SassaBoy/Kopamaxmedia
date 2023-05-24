@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Work Management</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 20px auto;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    form {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    textarea {
+      height: 100px;
+    }
+
+    button {
+      background-color: #fe4066;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    button:hover {
+      background-color: #fe4066;
+    }
+
+    .partner-list {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .partner-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+    }
+
+    .partner-item:last-child {
+      border-bottom: none;
+    }
+
+    .partner-item .partner-info {
+      flex-grow: 1;
+      margin-right: 10px;
+    }
+
+    .partner-item h3 {
+      margin: 0;
+    }
+
+    .partner-item p {
+      margin: 5px 0 0;
+    }
+
+    .partner-item button {
+      background-color: #fe4066;
+    }
+
+    .partner-item button:hover {
+      background-color: #c2484a;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Work Management</h1>
+
+    <form action="/work" enctype="multipart/form-data" method="POST">
+      <label for="name">Project Name</label>
+      <input type="text" id="name" required name="name" autocomplete="off">
+    
+      <label for="clientName">Client Name</label>
+      <input type="text" id="clientName" required name="clientName" autocomplete="organization">
+    
+      <br>
+    
+      <label for="category">Category</label>
+      <input type="text" id="category" required name="category" autocomplete="category">
+    
+      <label for="url">Client Url</label>
+      <input type="text" id="url" required name="url" autocomplete="url">
+    
+      <label for="description">Client Description</label>
+      <textarea id="description" name="description" autocomplete="off"></textarea>
+    
+      <button type="submit">Add Work</button>
+    </form>
+    
+
+    <!-- Partner List -->
+    <!-- <ul class="partner-list">
+      <li class="partner-item">
+        <div class="partner-info">
+          <h3>Partner Name</h3>
+          <p>partner@email.com</p>
+        </div>
+        <button>Delete</button>
+      </li>
+      <li class="partner-item">
+        <div class="partner-info">
+          <h3>Partner Name</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <button>Delete</button>
+      </li>
+     
+    </ul> -->
+  </div>
+</body>
+</html>
